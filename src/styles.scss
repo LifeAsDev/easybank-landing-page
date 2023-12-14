@@ -18,6 +18,8 @@ span {
   font-weight: 300;
 }
 button {
+  cursor: pointer;
+  transition: 0.3s;
   font-weight: 400;
   padding: 0.75rem 1.8rem;
   font-size: 0.9rem;
@@ -26,6 +28,9 @@ button {
   outline: none;
   border: none;
   background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+}
+button:hover {
+  background: linear-gradient(90deg, hsl(137, 59%, 62%), hsl(192, 64%, 65%));
 }
 main {
   display: flex;
