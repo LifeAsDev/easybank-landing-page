@@ -125,6 +125,7 @@ h3:hover {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .whyChooseList p {
   font-size: 0.9rem;
 }
@@ -253,12 +254,7 @@ footer {
     flex-direction: column;
     width: auto;
   }
-  section:nth-of-type(2) {
-    .whyChooseList {
-      flex-direction: column;
-      gap: 2.5rem;
-    }
-  }
+
   .mobile.hero-image {
     height: calc(84vw + 5rem);
     display: block;
@@ -361,6 +357,34 @@ footer {
         background-color: hsl(136, 65%, 51%);
       }
     }
+  }
+}
+@media (max-width: 1250px) {
+  .whyChooseList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .latestArticlesList {
+    margin-bottom: 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    li {
+      margin: auto;
+      width: 15rem;
+    }
+  }
+}
+@media (max-width: 680px) {
+  .latestArticlesList,
+  .whyChooseList {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 500px) {
