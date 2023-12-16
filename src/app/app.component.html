@@ -1,3 +1,13 @@
+<nav *ngIf="menu" class="mobile">
+  <div>
+    <p>Home</p>
+    <p>About</p>
+    <p>Contact</p>
+    <p>Blog</p>
+    <p>Careers</p>
+  </div>
+</nav>
+
 <header>
   <div>
     <div>
@@ -6,18 +16,25 @@
         alt="logo easybank"
       />
     </div>
-
-    <nav>
+    <div class="mobile menu-button" (click)="toggleMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="11">
+        <g fill="#2D314D" fill-rule="evenodd">
+          <path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z" />
+        </g>
+      </svg>
+    </div>
+    <nav class="desktop">
       <p>Home</p>
       <p>About</p>
       <p>Contact</p>
       <p>Blog</p>
       <p>Careers</p>
     </nav>
-    <button>Request Invite</button>
+
+    <button class="desktop">Request Invite</button>
   </div>
 </header>
-<div class="hero-image">
+<div class="hero-image desktop">
   <div>
     <div>
       <img
@@ -35,6 +52,21 @@
 </div>
 <main>
   <section>
+    <div class="hero-image mobile">
+      <div>
+        <img
+          src="/assets/easybank-landing-page-master/images/bg-intro-mobile.svg"
+          alt="bg-intro-mobile"
+        />
+        />
+      </div>
+      <div>
+        <img
+          src="/assets/easybank-landing-page-master/images/image-mockups.png"
+          alt="mockups"
+        />
+      </div>
+    </div>
     <div class="margin">
       <div class="hero-text">
         <h1>Next generation digital banking</h1>
